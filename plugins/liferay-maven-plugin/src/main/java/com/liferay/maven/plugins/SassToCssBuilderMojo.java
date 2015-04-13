@@ -34,7 +34,9 @@ public class SassToCssBuilderMojo extends AbstractLiferayMojo {
 
 	protected void doExecute() throws Exception {
 		FileFilter fileFilter = FileFilterUtils.orFileFilter(
-			DirectoryFileFilter.DIRECTORY,
+			FileFilterUtils.andFileFilter(
+				DirectoryFileFilter.DIRECTORY,
+				FileFilterUtils.notFileFilter(FileFilterUtils.nameFileFilter("node_modules"))),
 			FileFilterUtils.andFileFilter(
 				FileFileFilter.FILE, FileFilterUtils.suffixFileFilter(".css")));
 
