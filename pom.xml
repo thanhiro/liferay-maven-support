@@ -104,6 +104,11 @@
 	</pluginRepositories>
 	<distributionManagement>
 		<repository>
+			<id>arcusys-releases</id>
+			<name>arcusys releases</name>
+			<url>https://dev-1.arcusys.fi/mvn/content/repositories/arcusys-releases</url>
+		</repository>
+		<!-- <repository>
 			<id>${liferay.repository.release.id}</id>
 			<name>${liferay.repository.release.name}</name>
 			<url>${liferay.repository.release.url}</url>
@@ -112,7 +117,7 @@
 			<id>${liferay.repository.snapshots.id}</id>
 			<name>${liferay.repository.snapshots.name}</name>
 			<url>${liferay.repository.snapshots.url}</url>
-		</snapshotRepository>
+		</snapshotRepository> -->
 	</distributionManagement>
 	<profiles>
 		<profile>
